@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time GPS Speedometer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #f1f1f1;
+        }
+        h1 {
+            font-size: 2em;
+            color: #333;
+        }
+        .output {
+            font-size: 1.2em;
+            margin: 10px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #speed {
+            font-size: 2em;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        #distance, #time, #coordinates {
+            font-size: 1.5em;
+        }
+        #time {
+            font-size: 1.3em;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        button:disabled {
+            background-color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Real-Time GPS Speedometer</h1>
+
+    <div id="speed" class="output">Speed: 0 m/s</div>
+    <div id="distance" class="output">Distance: 0 m</div>
+    <div id="time" class="output">Time: 00:00</div>
+    <div id="coordinates" class="output">Latitude: 0, Longitude: 0</div>
+
+    <div class="button-container">
+        <button id="startButton">Start Tracking</button>
+        <button id="stopButton" disabled>Stop Tracking</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
